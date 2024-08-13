@@ -1,18 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bulma/css/bulma.min.css';
-import PatientForm from './components/PatientForm';
-import UserList from './components/UserList';
+import HomePage from './components/HomePage';
+import ViewData from './components/ViewData';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<PatientForm />} />
-          <Route path="/view-ages" element={<UserList />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/view_data" element={<ViewData />} />
+      </Routes>
     </Router>
   );
 }
