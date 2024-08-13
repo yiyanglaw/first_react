@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bulma/css/bulma.min.css';
 import PatientForm from './components/PatientForm';
 import UserList from './components/UserList';
@@ -8,10 +8,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/" exact component={PatientForm} />
-          <Route path="/view-ages" component={UserList} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<PatientForm />} />
+          <Route path="/view-ages" element={<UserList />} />
+        </Routes>
       </div>
     </Router>
   );
